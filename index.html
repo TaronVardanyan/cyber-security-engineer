@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Taron Vardanyan — Cyber Security Engineer</title>
+  <meta name="description" content="Taron Vardanyan — Cyber Security Engineer & SOC Analyst. ISC2 CC, Google Cybersecurity Professional, 7+ years building production systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="theme.js"></script>
+</head>
+<body>
+  <!-- boot loader -->
+  <div id="loader" aria-hidden="true">
+    <pre id="boot"></pre>
+    <div class="loader-bar"><span></span></div>
+    <p class="loader-skip">click to skip</p>
+  </div>
+
+  <canvas id="rain" aria-hidden="true"></canvas>
+  <div class="grid-floor" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="progress" aria-hidden="true"></div>
+  <div id="wipe" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="#hero" class="logo" data-scramble>TV<span>//</span>SEC</a>
+    <div class="nav-right">
+    <nav>
+      <a href="#about" data-scramble>whoami</a>
+      <a href="#certs" data-scramble>creds</a>
+      <a href="#skills" data-scramble>arsenal</a>
+      <a href="#experience" data-scramble>logs</a>
+      <a href="#labs" data-scramble>labs</a>
+      <a href="#contact" data-scramble>connect</a>
+    </nav>
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch color theme"><span class="ti">☀</span><span class="tl">light</span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hud hud-tl">SYS://NODE-AM-01<br><span class="blink">●</span> SECURE CHANNEL</div>
+      <div class="hud hud-tr">LAT 40.1792° N<br>LON 44.4991° E</div>
+      <div class="hud hud-bl">THREAT LEVEL: <b class="neon-y">MONITORED</b></div>
+      <div class="hud hud-br" id="clock">00:00:00 UTC</div>
+
+      <div class="hero-inner">
+        <p class="tag" id="hero-tag">// SYSTEM ONLINE · YEREVAN, ARMENIA</p>
+        <h1 class="hero-name">
+          <span class="line"><span class="glitch" data-text="TARON">TARON</span></span>
+          <span class="line"><span class="glitch outline" data-text="VARDANYAN">VARDANYAN</span></span>
+        </h1>
+        <p class="role">&gt; <span id="role">Cyber Security Engineer</span><span class="caret">_</span></p>
+        <p class="lead">7+ years building and operating production systems.<br>Now hunting the threats that target them.</p>
+        <div class="cta">
+          <a class="btn magnetic" href="#contact"><span>Initiate contact</span></a>
+          <a class="btn ghost magnetic" href="Taron_Vardanyan_SOC_Analyst.pdf" download><span>Download CV</span></a>
+        </div>
+      </div>
+
+      <div class="scroll-hint"><span></span>scroll</div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>SIEM</span><i>◆</i><span>SPLUNK</span><i>◆</i><span>CHRONICLE</span><i>◆</i><span>SURICATA IDS</span><i>◆</i><span>MITRE ATT&amp;CK</span><i>◆</i><span>NIST RMF</span><i>◆</i><span>OWASP</span><i>◆</i><span>INCIDENT RESPONSE</span><i>◆</i><span>PACKET ANALYSIS</span><i>◆</i><span>PYTHON</span><i>◆</i>
+        <span>SIEM</span><i>◆</i><span>SPLUNK</span><i>◆</i><span>CHRONICLE</span><i>◆</i><span>SURICATA IDS</span><i>◆</i><span>MITRE ATT&amp;CK</span><i>◆</i><span>NIST RMF</span><i>◆</i><span>OWASP</span><i>◆</i><span>INCIDENT RESPONSE</span><i>◆</i><span>PACKET ANALYSIS</span><i>◆</i><span>PYTHON</span><i>◆</i>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2 class="sec-title"><span class="idx">01</span><span class="sec-text">// whoami</span></h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I'm a <b class="neon-c">software engineer turned security operator</b>. For 7+ years I've built, shipped and kept alive production systems across SaaS and customer-support platforms: debugging multi-service outages under pressure, wiring up monitoring, and integrating identity flows.</p>
+          <p>Now I point that same discipline at <b class="neon-m">security operations</b>: SIEM investigation with Splunk and Chronicle, intrusion detection with Suricata, and incident detection &amp; response guided by <b>NIST</b> and <b>MITRE ATT&amp;CK</b>.</p>
+          <p class="edu"><span class="neon-y">EDU&gt;</span> M.Eng (2019–2021) &amp; B.Eng (2013–2019), National Polytechnic University of Armenia</p>
+        </div>
+        <div class="stats">
+          <div class="stat frame"><b data-count="7">7</b><span class="plus">+</span><p>years in production engineering</p></div>
+          <div class="stat frame"><b data-count="4">4</b><p>verified industry certifications</p></div>
+          <div class="stat frame"><b data-count="14">14</b><p>companies &amp; teams shipped with</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTS -->
+    <section id="certs" class="section">
+      <h2 class="sec-title"><span class="idx">02</span><span class="sec-text">// credentials</span></h2>
+      <div class="cert-grid">
+        <article class="cert tilt">
+          <div class="cert-glow"></div>
+          <div class="cert-head"><span class="badge">ISC2</span><span class="year">OCT 2026 → OCT 2029</span></div>
+          <h3>Certified in Cybersecurity <span class="neon-c">(CC)</span></h3>
+          <p>Security principles, business continuity &amp; incident response, access control, network security and security operations.</p>
+          <a class="verify" href="https://www.credly.com/badges/8c06f1a7-1d4c-411a-866f-087d98013605" target="_blank" rel="noopener noreferrer">VERIFY CREDENTIAL ↗</a>
+        </article>
+        <article class="cert tilt">
+          <div class="cert-glow"></div>
+          <div class="cert-head"><span class="badge m">GOOGLE</span><span class="year">AUG 2026</span></div>
+          <h3>Cybersecurity Professional <span class="neon-m">Certificate</span></h3>
+          <ul class="chips">
+            <li>Foundations of Cybersecurity</li>
+            <li>Manage Security Risks</li>
+            <li><a href="https://www.coursera.org/account/accomplishments/verify/ZH1I4DPX7Q9S" target="_blank" rel="noopener noreferrer">Networks &amp; Network Security ↗</a></li>
+            <li><a href="https://www.coursera.org/account/accomplishments/verify/95RGNL5NB7FZ" target="_blank" rel="noopener noreferrer">Linux &amp; SQL ↗</a></li>
+            <li><a href="https://www.coursera.org/account/accomplishments/records/QGLHMZAQYC62" target="_blank" rel="noopener noreferrer">Assets, Threats &amp; Vulnerabilities ↗</a></li>
+            <li><a href="https://www.coursera.org/account/accomplishments/records/1038GKHTYMFH" target="_blank" rel="noopener noreferrer">Detection &amp; Response ↗</a></li>
+            <li><a href="https://www.coursera.org/account/accomplishments/records/MSXPH9GIAF31" target="_blank" rel="noopener noreferrer">Automate with Python ↗</a></li>
+            <li>Prepare for Cybersecurity Jobs</li>
+          </ul>
+          <a class="verify" href="https://www.coursera.org/account/accomplishments/professional-cert/certificate/MF4O8L54L8BG" target="_blank" rel="noopener noreferrer">VERIFY CREDENTIAL ↗</a>
+        </article>
+        <article class="cert tilt">
+          <div class="cert-glow"></div>
+          <div class="cert-head"><span class="badge g">CISCO</span><span class="year">JUN 2024</span></div>
+          <h3>Introduction to <span class="neon-g">Cybersecurity</span></h3>
+          <p>Cisco Networking Academy: threats and attacks, protecting personal data and devices, network defense fundamentals and cybersecurity career paths.</p>
+          <a class="verify" href="https://www.credly.com/badges/a9967bfd-6a79-44cb-b424-f445288c8515" target="_blank" rel="noopener noreferrer">VERIFY CREDENTIAL ↗</a>
+        </article>
+        <article class="cert tilt">
+          <div class="cert-glow"></div>
+          <div class="cert-head"><span class="badge y">IBM</span><span class="year">SEP 2026</span></div>
+          <h3>Data Analytics <span class="neon-y">Essentials</span></h3>
+          <p>Data collection, cleaning, analysis and visualization: the same skills behind log analysis and spotting anomalies in security telemetry.</p>
+          <a class="verify" href="https://www.credly.com/badges/fc603f5f-ccd8-4a60-802b-6631031d5a55" target="_blank" rel="noopener noreferrer">VERIFY CREDENTIAL ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2 class="sec-title"><span class="idx">03</span><span class="sec-text">// arsenal</span></h2>
+      <div class="skill-grid">
+        <div class="skill frame tilt"><h4><span class="ico">⌁</span>SIEM / Detection</h4><ul><li>Splunk</li><li>Chronicle</li><li>Suricata IDS</li><li>Log analysis</li><li>Alert triage</li></ul></div>
+        <div class="skill frame tilt"><h4><span class="ico">⇄</span>Networking</h4><ul><li>TCP/IP</li><li>DNS</li><li>Firewalls</li><li>VPNs</li><li>Packet analysis</li></ul></div>
+        <div class="skill frame tilt"><h4><span class="ico">⛨</span>Frameworks</h4><ul><li>NIST RMF</li><li>MITRE ATT&amp;CK</li><li>OWASP</li></ul></div>
+        <div class="skill frame tilt"><h4><span class="ico">&gt;_</span>Scripting &amp; Systems</h4><ul><li>Python</li><li>SQL</li><li>Bash</li><li>Linux CLI</li></ul></div>
+        <div class="skill frame tilt wide"><h4><span class="ico">◈</span>Core Concepts</h4><ul><li>Threat &amp; vulnerability assessment</li><li>Incident detection &amp; response</li><li>Security controls</li><li>Identity &amp; access management</li><li>Cryptography fundamentals</li><li>System hardening</li></ul></div>
+      </div>
+
+      <h3 class="sub">transferable_ops.log</h3>
+      <div class="ops">
+        <div class="op"><span class="op-k">DEBUG/RCA</span><span class="op-v">7+ years diagnosing complex, multi-service production systems under time pressure.</span></div>
+        <div class="op"><span class="op-k">MONITORING</span><span class="op-v">Sentry error monitoring; Amplitude &amp; Google Analytics for behavioral analytics and anomaly spotting.</span></div>
+        <div class="op"><span class="op-k">IAM</span><span class="op-v">Integrated Auth0 authentication flows into production applications.</span></div>
+        <div class="op"><span class="op-k">IaC / CI-CD</span><span class="op-v">Terraform-managed infrastructure, shipped via GitHub Actions pipelines.</span></div>
+        <div class="op"><span class="op-k">DATA</span><span class="op-v">SQL/GraphQL-backed reporting grids, D3.js and embedded Tableau dashboards.</span></div>
+        <div class="op"><span class="op-k">LEADERSHIP</span><span class="op-v">Led and mentored engineers across design, backend and outsourced client teams.</span></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h2 class="sec-title"><span class="idx">04</span><span class="sec-text">// access.logs</span></h2>
+      <div class="timeline">
+        <div class="tl-line"><span></span></div>
+        <article class="job">
+          <div class="node"></div>
+          <p class="when">[ ACTIVE ]</p>
+          <h3>Front End Team Lead <em>@ Civitta</em></h3>
+          <ul>
+            <li>Lead a front-end team: technical direction, code reviews, mentoring, still hands-on with delivery.</li>
+            <li>Coordinate staffing &amp; delivery across concurrent outsourced client engagements.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <div class="node"></div>
+          <p class="when">[ ACTIVE ]</p>
+          <h3>Senior Software Engineer <em>@ FactoryPal (via Civitta)</em></h3>
+          <ul>
+            <li>Industrial shop-floor platform on a large micro-frontend architecture; production health via Sentry &amp; analytics.</li>
+            <li>Jest &amp; Cypress test suites with SonarQube coverage &amp; static analysis enforced in CI.</li>
+            <li>Automated build/rollback pipeline; infrastructure managed through Terraform.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <div class="node"></div>
+          <p class="when">[ ARCHIVED ]</p>
+          <h3>Software Engineer <em>@ Loftware</em></h3>
+          <ul>
+            <li>Auth0 authentication &amp; real-time data flows (Pusher/Laravel Echo, Firebase) across Angular/React.</li>
+            <li>Jest &amp; Playwright testing; triaged production errors with Sentry.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <div class="node"></div>
+          <p class="when">[ ARCHIVED ]</p>
+          <h3>Software Engineer, React.js <em>@ HackTech LLC</em></h3>
+          <ul>
+            <li>Owned front-end architecture for a CRM with trackable links, usage analytics &amp; data-grid reporting.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <div class="node"></div>
+          <p class="when">[ 2019 — 2025 ]</p>
+          <h3>Additional Engineering <em>@ 10 organizations</em></h3>
+          <ul class="chips small">
+            <li>Beewo</li><li>Salesmrkt</li><li>Global Airlines</li><li>Bl.ink</li><li>Feezbak</li><li>SoftConstruct</li><li>Esterox</li><li>eLeaP</li><li>Giver</li><li>Worky.am</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- LABS -->
+    <section id="labs" class="section">
+      <h2 class="sec-title"><span class="idx">05</span><span class="sec-text">// lab.ops</span></h2>
+      <div class="lab-grid">
+        <article class="lab frame tilt">
+          <div class="cert-glow"></div>
+          <div class="cert-head"><span class="badge">HOME SOC LAB</span><span class="year">GITHUB</span></div>
+          <h3>Wazuh SIEM <span class="neon-m">+</span> Suricata NIDS <span class="neon-m">+</span> OpenVAS</h3>
+          <p>A working small-SOC lab on a single M1 MacBook: Wazuh watching the hosts, Suricata on a NAT gateway watching the network, and Greenbone/OpenVAS hunting weaknesses. Four UTM VMs (Ubuntu Server, Ubuntu Desktop, Windows 11, Kali as attacker) sit on an isolated subnet.</p>
+          <div class="lab-stats">
+            <div><b data-count="27">27</b><span>problems solved &amp; documented</span></div>
+            <div><b data-count="3610">3,610</b><span>brute-force alerts detected</span></div>
+            <div><b data-count="4">4</b><span>VMs monitored</span></div>
+            <div><b data-count="3">3</b><span>build phases</span></div>
+          </div>
+          <ol class="lab-parts">
+            <li><span class="neon-c">01</span> Wazuh in Docker, agents on every VM, SSH brute force → detection → Active Response</li>
+            <li><span class="neon-c">02</span> Ubuntu NAT gateway, isolated subnet, Suricata alerts forwarded into Wazuh</li>
+            <li><span class="neon-c">03</span> Greenbone CE next to Wazuh and first vulnerability scans of every VM</li>
+          </ol>
+          <ul class="chips"><li>Wazuh 4.10</li><li>Suricata 8.0</li><li>OpenVAS</li><li>Docker</li><li>UTM</li><li>Kali</li><li>Hydra</li><li>Nmap</li><li>iptables / NAT</li></ul>
+          <a class="btn magnetic lab-btn" href="https://github.com/TaronVardanyan/cs-home-lab" target="_blank" rel="noopener noreferrer"><span>&lt;/&gt; View repository</span></a>
+        </article>
+        <article class="lab thm frame tilt">
+          <div class="cert-glow"></div>
+          <div class="cert-head"><span class="badge m">TRYHACKME</span><span class="year">@taroka</span></div>
+          <h3>Hands-on <span class="neon-g">offensive &amp; defensive</span> training</h3>
+          <p>Practical rooms covering SOC workflows, network analysis, Linux, web exploitation and incident response, practised in live, sandboxed environments.</p>
+          <pre class="thm-term"><span class="neon-g">$</span> connect --vpn thm
+<span class="neon-g">[+]</span> tunnel up
+<span class="neon-g">[+]</span> target acquired
+<span class="neon-y">&gt;</span> keep learning_</pre>
+          <a class="btn ghost magnetic lab-btn" href="https://tryhackme.com/p/taroka" target="_blank" rel="noopener noreferrer"><span>View profile</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2 class="sec-title"><span class="idx">06</span><span class="sec-text">// handshake</span></h2>
+      <div class="terminal frame">
+        <div class="term-bar"><i></i><i></i><i></i><span>root@tv-sec: ~</span></div>
+        <div class="term-body">
+          <p><span class="neon-g">root@tv-sec</span>:<span class="neon-c">~</span>$ <span class="typed" data-text="./establish_connection --target=you"></span></p>
+          <div class="term-out">
+            <p class="neon-g">[OK] Handshake complete. Channel encrypted.</p>
+            <p>Open to <b class="neon-y">SOC Analyst</b> and <b class="neon-y">Security Engineer</b> roles.</p>
+            <div class="links">
+              <a class="btn magnetic" href="mailto:tarokavardanyan@gmail.com"><span>✉ tarokavardanyan@gmail.com</span></a>
+              <a class="btn ghost magnetic" href="https://www.linkedin.com/in/taron-vardanyan-3a1b85198/" target="_blank" rel="noopener noreferrer"><span>in / LinkedIn</span></a>
+              <a class="btn ghost magnetic" href="https://github.com/TaronVardanyan" target="_blank" rel="noopener noreferrer"><span>&lt;/&gt; GitHub</span></a>
+              <a class="btn ghost magnetic" href="https://tryhackme.com/p/taroka" target="_blank" rel="noopener noreferrer"><span>⚑ TryHackMe</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="yr"></span> TARON VARDANYAN <span class="neon-m">//</span> ALL PACKETS INSPECTED</p>
+  </footer>
+
+  <!-- SRI hashes from cdnjs: the browser refuses the file if the CDN copy is ever tampered with -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="main.js"></script>
+</body>
+</html>
